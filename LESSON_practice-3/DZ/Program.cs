@@ -247,26 +247,26 @@
 // РЕШЕНИЕ?????:
 // ***************
 
-int num = 8741;
-int num1 = num;
-int size = 0;
+// int num = 8741;
+// int num1 = num;
+// int size = 0;
 
-while (num1 > 0)
-{
-    num1 = num / 10;
-    size++;
-}
+// while (num1 > 0)
+// {
+//     num1 = num / 10;
+//     size++;
+// }
 
 
-int[] array = new int[size];
-while (num > 0)
-{
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = num % 10;
-        num /= 10;
-        Console.WriteLine(array[i]);
-    }
-}
+// int[] array = new int[size];
+// while (num > 0)
+// {
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = num % 10;
+//         num /= 10;
+//         Console.WriteLine(array[i]);
+//     }
+// }
 
 // ****************************************************************************************************
