@@ -6,7 +6,7 @@
 - [Массивы (семинар)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_practice-3)
 3. [Функции (лекция)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_3)
 - [Функции (семинар)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_practice-4)
-4. [Двумерные Массивы (лекция)]()
+4. [Двумерные Массивы (лекция)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_4)
 - [Двумерные Массивы (семинар)]()
 - [Массивы и строки (семинар)]()
 5. [Рекурсия (лекция)]()
