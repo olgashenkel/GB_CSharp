@@ -32,3 +32,4 @@ Console.WriteLine(quotient);
 d1 = 6;
 double quotient2 = i1 / d1;
 Console.WriteLine(quotient2);
+

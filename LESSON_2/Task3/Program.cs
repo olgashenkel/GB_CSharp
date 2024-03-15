@@ -17,3 +17,5 @@ while (i < array.Length)
     }
     i++;
 }
+
+Cons
