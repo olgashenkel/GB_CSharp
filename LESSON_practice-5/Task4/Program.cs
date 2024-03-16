@@ -6,6 +6,9 @@
 // 2 3 4 3
 // 4 3 4 1 => [3 3 5]
 // 2 9 5 4
+// ***************
+// РЕШЕНИЕ:
+// ***************
 
 
 int[,] Create2dArray(int min, int max, int rows, int cols)
