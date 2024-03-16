@@ -58,6 +58,6 @@ Console.WriteLine("Исходный массив: ");
 int[,] array2 = Create2dArray(minimum, maximum, rows1, cols1);
 Show2dArray(array2);
 
-Console.WriteLine("\n\nНовый массив: ");
+Console.WriteLine("\nНовый массив: ");
 int[,] matrix = MakeSquares(array2);
 Show2dArray(matrix);
