@@ -259,92 +259,215 @@
 // РЕШЕНИЕ:
 // ***************
 
-using System;
+// using System;
 
-//Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
-class UserInputToCompileForTest
+// //Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
+// class UserInputToCompileForTest
+// {
+//     /// Вычисление сумм по строкам (на выходе массив с суммами строк)
+//     public static int[] SumRows(int[,] array)
+//     {
+//         int[] sum = new int[array.GetLength(0)];
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 sum[i] += array[i, j];
+//             }
+//         }
+//         return sum;
+//     }
+
+//     // Получение индекса минимального элемента в одномерном массиве
+//     public static int MinIndex(int[] array)
+//     {
+//         int minI = 0;
+//         for (int i = 0; i < array.Length; i++)
+//         {
+//             if (array[minI] > array[i])
+//             {
+//                 minI = i;
+//             }
+//         }
+//         return minI;
+//     }
+//     public static void PrintResult(int[,] numbers)
+//     {
+//         int[] sums = SumRows(numbers);
+//         int minIndex = MinIndex(sums);
+//         Console.Write(minIndex);
+//     }
+// }
+
+// //Не удаляйте и не меняйте класс Answer!
+// class Answer
+// {
+//     public static void Main(string[] args)
+//     {
+//         int[,] numbers;
+
+//         if (args.Length >= 1)
+//         {
+//             // Предполагается, что строки разделены запятой и пробелом, а элементы внутри строк разделены пробелом
+//             string[] rows = args[0].Split(',');
+
+//             int rowCount = rows.Length;
+//             int colCount = rows[0].Trim().Split(' ').Length;
+
+//             numbers = new int[rowCount, colCount];
+
+//             for (int i = 0; i < rowCount; i++)
+//             {
+//                 string[] rowElements = rows[i].Trim().Split(' ');
+
+//                 for (int j = 0; j < colCount; j++)
+//                 {
+//                     if (int.TryParse(rowElements[j], out int result))
+//                     {
+//                         numbers[i, j] = result;
+//                     }
+//                     else
+//                     {
+//                         Console.WriteLine($"Error parsing element {rowElements[j]} to an integer.");
+//                         return;
+//                     }
+//                 }
+//             }
+//         }
+//         else
+//         {
+//             // Если аргументов на входе нет, используем примерный массив
+
+//             numbers = new int[,] {
+//                 {1, 2, 3},
+//                 {1, 1, 0},
+//                 {7, 8, 2},
+//                 {9, 10, 11}
+//     };
+//         }
+//         UserInputToCompileForTest.PrintResult(numbers);
+//     }
+// }
+
+
+
+// ****************************************************************************************************
+// ЗАДАЧА 4. 
+// Задайте двумерный массив из целых чисел. Напишите программу, которая удалит
+// строку и столбец, на пересечении которых расположен наименьший элемент массива. 
+// Под удалением понимается создание нового двумерного массива без строки и столбца.
+
+// ***************
+// РЕШЕНИЕ:
+// ***************
+
+
+int[,] Create2dArray(int min, int max, int rows, int cols)
 {
-    /// Вычисление сумм по строкам (на выходе массив с суммами строк)
-    public static int[] SumRows(int[,] array)
+    int[,] array = new int[rows, cols];
+
+    for (int i = 0; i < rows; i++)
     {
-        int[] sum = new int[array.GetLength(0)];
-        for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < cols; j++)
         {
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                sum[i] += array[i, j];
-            }
+            array[i, j] = new Random().Next(min, max + 1);
         }
-        return sum;
     }
 
-    // Получение индекса минимального элемента в одномерном массиве
-    public static int MinIndex(int[] array)
+    return array;
+}
+
+void Show2dArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        int minI = 0;
-        for (int i = 0; i < array.Length; i++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[minI] > array[i])
-            {
-                minI = i;
-            }
+            Console.Write($"{array[i, j]}\t");
         }
-        return minI;
-    }
-    public static void PrintResult(int[,] numbers)
-    {
-        int[] sums = SumRows(numbers);
-        int minIndex = MinIndex(sums);
-        Console.Write(minIndex);
+
+        Console.WriteLine();
     }
 }
 
-//Не удаляйте и не меняйте класс Answer!
-class Answer
+int[] MinElementCoordinates(int[,] array)
 {
-    public static void Main(string[] args)
+    int min = array[0, 0];
+    int[] min_coordinates = new int[2];
+
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        int[,] numbers;
-
-        if (args.Length >= 1)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            // Предполагается, что строки разделены запятой и пробелом, а элементы внутри строк разделены пробелом
-            string[] rows = args[0].Split(',');
-
-            int rowCount = rows.Length;
-            int colCount = rows[0].Trim().Split(' ').Length;
-
-            numbers = new int[rowCount, colCount];
-
-            for (int i = 0; i < rowCount; i++)
+            if (array[i, j] < min)
             {
-                string[] rowElements = rows[i].Trim().Split(' ');
-
-                for (int j = 0; j < colCount; j++)
-                {
-                    if (int.TryParse(rowElements[j], out int result))
-                    {
-                        numbers[i, j] = result;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Error parsing element {rowElements[j]} to an integer.");
-                        return;
-                    }
-                }
+                min = array[i, j];
+                min_coordinates[0] = i;
+                min_coordinates[1] = j;
             }
         }
-        else
-        {
-            // Если аргументов на входе нет, используем примерный массив
-
-            numbers = new int[,] {
-                {1, 2, 3},
-                {1, 1, 0},
-                {7, 8, 2},
-                {9, 10, 11}
-    };
-        }
-        UserInputToCompileForTest.PrintResult(numbers);
     }
+
+    return min_coordinates;
 }
+
+int[,] SwapElementsRow(int[,] array)
+{
+    for (int i = MinElementCoordinates(array)[0]; i < array.GetLength(0) - 1; i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            (array[i + 1, j], array[i, j]) = (array[i, j], array[i + 1, j]);
+        }
+    }
+
+    return array;
+}
+
+int[,] SwapElementsCol(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = MinElementCoordinates(array)[1]; j < array.GetLength(1) - 1; j++)
+        {
+            (array[i, j + 1], array[i, j]) = (array[i, j], array[i, j + 1]);
+        }
+    }
+
+    return array;
+}
+
+int[,] New2dArray(int[,] array)
+{
+    int[,] new_array = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
+
+    for (int i = 0; i < new_array.GetLength(0); i++)
+    {
+        for (int j = 0; j < new_array.GetLength(1); j++)
+        {
+            new_array[i, j] = array[i, j];
+        }
+    }
+
+    return new_array;
+
+}
+
+Console.WriteLine("Введите минимальное значение массива:");
+int min = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите максимальное значение массива:");
+int max = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите количество строк массива:");
+int rows = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите количество столбцов массива:");
+int cols = int.Parse(Console.ReadLine()!);
+
+int[,] matrix = Create2dArray(min, max, rows, cols);
+Console.WriteLine("Исходный массив:");
+Show2dArray(matrix);
+
+Console.WriteLine("\nНовый массив:");
+Show2dArray(New2dArray(SwapElementsRow(SwapElementsCol(matrix))));
