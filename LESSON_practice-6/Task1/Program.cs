@@ -169,24 +169,119 @@
 
 
 // ****************************************************************************************************
+// Задание 5. Из строки сделать массив строк по количеству пробелов.
+// Например: 
+// "Hello All World!" 
+// => 
+// "Hello"
+// "All"
+// "World!"
 
 // ***************
 // РЕШЕНИЕ:
 // ***************
 
+
+// int CountString(string input)
+// {
+//     int count = 1;
+//     for (int i = 0; i < input.Length; i++)
+//     {
+//         if (input[i] == ' ')
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+
+// string[] StringIsArray(string input)
+// {
+//     string[] answer = new string[CountString(input)];
+//     int count = 0;
+//     string result = "";
+//     for (int i = 0; i < input.Length; i++)
+//     {
+//         if (input[i] == ' ')
+//         {
+//             answer[count] = result;
+//             result = "";
+//             count++;
+//         }
+//         else
+//         {
+//             result += input[i];
+//         }
+//     }
+//     answer[count] = result;
+//     return answer;
+// }
+
+// void PrintArray(string[] array)
+// {
+//     foreach (string c in array)
+//     {
+//         Console.WriteLine($"{c} ");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("Введите строку:");
+// string input = Console.ReadLine()!;
+
+// string[] array = StringIsArray(input);
+// Console.WriteLine("\nМассив строк:");
+
+// PrintArray(array);
 
 
 // ****************************************************************************************************
+// Задание 5. Ввести строку, затем после строки символы. 
+// Посчитать сколько раз этот символ встречается в строке.
 
 // ***************
 // РЕШЕНИЕ:
 // ***************
 
+// Console.Clear();
+// Console.WriteLine("Введите строку:");
+// string stroka = Console.ReadLine()!;
+// Console.WriteLine("Введите символ:");
+// char simvol = Console.ReadLine()![0];
 
+// int count = 0;
+// foreach (char item in stroka)
+// {
+//     if (item == simvol)
+//     {
+//         count++;
+//     }
+// }
 
+// Console.WriteLine($"Количество символов ({simvol}) в строке = {count}");
 
 // ****************************************************************************************************
+// Задача 6. Ввести строку, ввести символ, 
+// вывести массив целых чисел, с позициями этого символа в строке.
 
 // ***************
 // РЕШЕНИЕ:
 // ***************
+
+Console.Clear();
+Console.WriteLine("Введите строку:");
+string stroka = Console.ReadLine()!;
+Console.WriteLine("Введите символ:");
+char simvol = Console.ReadLine()![0];
+
+int count = 0;
+foreach (char item in stroka)
+{
+    if (item == simvol)
+    {
+        count++;
+    }
+}
+
+Console.WriteLine($"Количество символов ({simvol}) в строке = {count}");
