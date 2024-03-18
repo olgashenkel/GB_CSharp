@@ -11,4 +11,5 @@
 - [Массивы и строки (семинар)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_practice-6)
 5. [Рекурсия (лекция)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_5)
 - [Рекурсия (семинар)]()
-6. [Практика](https://github.com/olgashenkel/GB_CSharp/tree/main/PRACTICE)
+6. [ИТОГОВАЯ АТТЕСТАЦИЯ]()
+7. [Практика](https://github.com/olgashenkel/GB_CSharp/tree/main/PRACTICE)
