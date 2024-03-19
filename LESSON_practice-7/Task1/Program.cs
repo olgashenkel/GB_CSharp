@@ -97,6 +97,4 @@ Console.Clear();
 Console.WriteLine("Введите любую строку, содержащую латинские буквы:");
 string letters = Console.ReadLine()!;
 
-// Console.Write(OutputOfDigits(num1));
-
 PrintSoql(letters);
