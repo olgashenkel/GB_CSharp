@@ -5,6 +5,7 @@
 т.е. процесс возвратов к местам рекурсивного вызова функции на строке
 return n * Fact(n - 1);
 */
+
 int Fact(int n)
 {
     if (n == 1 || n == 0)
@@ -29,4 +30,3 @@ int num = int.Parse(Console.ReadLine()!);
 Console.Write("\nСтрока чисел для вычисления факториала: ");
 
 Console.WriteLine($"\nРезультат. !{num} = {Fact(num)}");
-
