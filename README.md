@@ -10,6 +10,6 @@
 - [Двумерные Массивы (семинар)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_practice-5)
 - [Массивы и строки (семинар)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_practice-6)
 5. [Рекурсия (лекция)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_5)
-- [Рекурсия (семинар)]()
-6. [ИТОГОВАЯ АТТЕСТАЦИЯ]()
+- [Рекурсия (семинар)](https://github.com/olgashenkel/GB_CSharp/tree/main/LESSON_practice-7)
+6. [ИТОГОВАЯ АТТЕСТАЦИЯ](https://github.com/olgashenkel/GB_CSharp/tree/main/ITOGOVAYA_ATTESTACIYA)
 7. [Практика](https://github.com/olgashenkel/GB_CSharp/tree/main/PRACTICE)
