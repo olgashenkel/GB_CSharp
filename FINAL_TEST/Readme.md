@@ -20,4 +20,6 @@
 ## Ход работы:
 1. Создание репозитория на [GitHub](https://github.com/olgashenkel/GB_CSharp/tree/main/FINAL_TEST).
 2. Создание и оформление текстового файла [Readme.md](https://github.com/olgashenkel/GB_CSharp/blob/main/FINAL_TEST/Readme.md), содержащего описание выполнения итоговой контрольной работы.
+3. Создание блок-схемы алгоритма с помощью программы Draw.io ([CountArray.drawio](), [CountArray.png]()).
+4. Написание программы на языке программирования C#, для рещения поставленной задачи ([Program.cs](https://github.com/olgashenkel/GB_CSharp/blob/main/FINAL_TEST/Program.cs)).
 
