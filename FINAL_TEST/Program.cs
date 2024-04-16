@@ -32,4 +32,5 @@ PrintArray(array1);
 
 Console.WriteLine("\nНовый массив, содержащий не более трёх символов: ");
 CountArray(array1, array2);
+
 PrintArray(array2);
