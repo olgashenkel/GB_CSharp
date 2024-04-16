@@ -1,5 +1,3 @@
-<image src="https://static.ict.moscow/files/productcard/logo/GeekBrains.png" alt="GeekBrains"  width="150"> 
-
 # Итоговая контрольная работа по основному блоку
 
 ## Описание работы:
